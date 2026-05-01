@@ -15,6 +15,19 @@ Três comandos cooperam:
 
 Inspiração: prompt socrático de "Engenheiro Sênior + Mentor Pessoal" para combater vibe-coding cego.
 
+## Requisitos de ambiente
+
+A skill entrega o conteúdo didático como **artefatos em arquivo** (código anotado + log de aprendizado). Esses artefatos só cumprem sua função pedagógica quando o ambiente sabe renderizar arquivos em painel ao lado do chat.
+
+| Ambiente | Como o código didático aparece | Suportado |
+|----------|-------------------------------|-----------|
+| Claude Code Desktop (Mac/Windows) | Painel à direita do chat — auto | ✅ |
+| Cursor / VS Code / JetBrains com Claude | Arquivo aberto no editor (split com chat) | ✅ |
+| Web app (claude.ai/code) | Painel lateral de arquivos | ✅ |
+| Terminal puro (ssh, tmux, CLI-only sem TUI) | Sem split — só `cat` no stdout | ❌ não suportado |
+
+**Em terminal puro, `/learning-to-code on` recusa ativação** com mensagem orientando o usuário a abrir Claude Code Desktop ou IDE. `/btw` continua funcionando (resposta no chat). `/preprompt` continua funcionando (diff inline).
+
 ## Estrutura do repositório
 
 ```
