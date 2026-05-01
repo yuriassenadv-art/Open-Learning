@@ -7,6 +7,19 @@ description: Use quando o usuário invocar /preprompt, /learning-to-code ou /btw
 
 Família de skills que transforma o Claude Code em um Mentor de Programação Pessoal. O modelo deixa de ser "caixa preta" e passa a ser pair-programmer didático.
 
+## Pré-requisitos de ambiente
+
+A skill entrega o conteúdo didático como **arquivos** (código anotado + log de aprendizado em `learning-journal/`). O usuário precisa de um cliente que renderize esses arquivos em painel ao lado do chat:
+
+| Ambiente | Suporte |
+|----------|---------|
+| Claude Code Desktop | ✅ painel à direita do chat |
+| IDE com integração (Cursor, VS Code, JetBrains) | ✅ arquivos abertos no editor |
+| Web app (claude.ai/code) | ✅ painel lateral |
+| Terminal puro (CLI-only, ssh sem TUI) | ❌ recusado por `/learning-to-code` |
+
+`/preprompt` e `/btw` operam só pelo chat e funcionam em qualquer ambiente. Apenas `/learning-to-code` exige cliente com painel — vê regra completa em `savycode-learning-to-code`.
+
 Três comandos cooperam:
 
 | Comando | Quando | O que faz |
