@@ -1,0 +1,25 @@
+# Estado runtime (não versionar — cada usuário tem o seu)
+**/state.json
+**/knowledge-profile.json
+!state-template/state.json
+!state-template/knowledge-profile.json
+
+# Logs de aprendizado de sessões (geralmente locais ao projeto)
+learning-journal/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*~
